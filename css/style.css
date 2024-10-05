@@ -13,6 +13,7 @@ body {
     color: peru;
     font-size: 15px;
     height: 75px;
+    border-bottom: 3px solid peru;
 }
 .menu ul {
     display: flex;
@@ -103,4 +104,79 @@ body {
 .btn:hover {
     background-color: peru;
     color: white;
+}
+/* sign in page */
+.sign-in-page {
+    background-image: none;
+    height: auto;
+}
+.sign-in-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.form {
+    height: 70%;
+    color: peru;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.form .title h1 {
+    margin-bottom: 5px;
+    font-size: 42px;
+    font-weight: bold;
+}
+.form .title p {
+    font-size: 24px;
+    text-align: center;
+}
+.form-group {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    font-weight: border;
+    margin-bottom: 10px;
+}
+.form-input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid peru;
+}
+.form-group .btn {
+    border: 1px solid peru;
+    background-color: peru;
+    color: white;
+    font-size: 24px;
+}
+.form-group .btn:hover {
+    border: 1px solid peru;
+    background-color: white;
+    font-size: 24px;
+}
+.form-group a {
+    text-align: none;
+    color: peru;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: right;
+    text-decoration: none;
+}
+.sign-in-anchor a {
+    text-decoration: none;
+    color: peru;
+    font-weight: bold;
+}
+.img-login {
+    width: 500px;
+}
+.img-login img {
+    width: 150%;
+    object-fit: cover;
 }
