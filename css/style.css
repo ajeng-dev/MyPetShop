@@ -93,6 +93,14 @@ body {
     border: 1px solid peru;
 }
 /* component */
+body .container {
+    display: flex;
+    justify-content: center;
+}
+.wrapper {
+    width: 980px;
+    padding: 20px 50px;
+}
 .btn {
     text-align: center;
     text-decoration: none;
@@ -350,3 +358,61 @@ table tbody tr td {
     padding: 10px;
     text-align: center;
 }
+/* customers */
+.customer-section {
+    display: flex;
+  }
+  .customer-section-img {
+    max-width: 500px;
+  }
+  .customer-section-img img {
+    width: 50%;
+  }
+  .customer-form {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .customer-form button {
+    background-color: peru;
+    border: 1px solid peru;
+    color: #fff;
+    width: 100px;
+  }
+  .customer-form h1 {
+    border-left: 1px solid peru;
+    padding-left: 10px;
+    color: peru;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .customer-form-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .form-group-customer {
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 0;
+  }
+  .form-group-customer input, .form-group-customer select {
+    width: 70%;
+    padding: 5px;
+  }
+  .form-group-customer .form-group-customer-radio {
+    display: flex;
+    width: 70%;
+  }
+  .form-group-customer .form-group-customer-radio .form-group-customer-radio-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  .form-group-customer .form-group-customer-radio .form-group-customer-radio-item label {
+    padding-left: 5px;
+  }
