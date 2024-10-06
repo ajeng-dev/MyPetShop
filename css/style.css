@@ -180,3 +180,44 @@ body {
     width: 150%;
     object-fit: cover;
 }
+/* animal page */
+.animal-page {
+    height: 100%;
+    margin: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.animal-1 {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.animal-1 h1 {
+    font-size: 40px;
+    text-align: center; 
+    padding-bottom: 20px;
+    font-weight: bold;
+    color: peru;
+}
+.animal-1 img {
+    width: 450px;
+    height: 450px;
+}
+.animal-2 {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.animal-2 h1 {
+    font-size: 40px;
+    text-align: center; 
+    padding-bottom: 20px;
+    font-weight: bold;
+    color: peru;
+}
+.animal-2 img {
+    width: 450px;
+    height: 450px;
+}
