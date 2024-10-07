@@ -1,16 +1,16 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'nunito';
 }
 .header {
     height: 100%;
-    background-image: url(/assets/page-home.png);
+    background-image: url(/MyPetShop/assets/page-home.png);
     background-size: cover;
 }
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: peru;
+    color: #a05d37;
     font-size: 15px;
     height: 75px;
     border-bottom: 3px solid peru;
@@ -21,7 +21,7 @@ body {
 .menu ul li {
     padding: 0 15px;
     list-style: none;
-    border-right: 1px solid peru;
+    border-right: 1px solid #a05d37;
 }
 .menu ul li:last-child {
     border: none;
@@ -29,11 +29,11 @@ body {
 .menu ul li a {
     text-decoration: none;
     list-style: none;
-    color: peru;
+    color: #a05d37;
 }
 .menu ul li a:hover {
     padding-bottom: 10px;
-    border-bottom: 2px solid peru;
+    border-bottom: 2px solid #a05d37;
 }
 .logo {
     padding: 0 10px;
@@ -67,7 +67,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 50px;
-    color: peru;
+    color: #a05d37;
     font-size: 50px;
     margin: 0 10px;
 }
@@ -76,7 +76,7 @@ body {
     width: 100px;
 }
 .banner-content a:hover {
-    background-color: peru;
+    background-color: #a05d37;
     color: white;
 } 
 .sign-in {
@@ -90,7 +90,7 @@ body {
     align-items: center;
 }
 .sign-in a:hover {
-    border: 1px solid peru;
+    border: 1px solid #a05d37;
 }
 /* component */
 body .container {
@@ -105,12 +105,12 @@ body .container {
     text-align: center;
     text-decoration: none;
     list-style: none;
-    color: peru;
+    color: #a05d37;
     border-radius: 10px;
     padding: 10px 15px;
 }
 .btn:hover {
-    background-color: peru;
+    background-color: #bf9a7a;
     color: white;
 }
 /* sign in page */
@@ -126,7 +126,7 @@ body .container {
 }
 .form {
     height: 70%;
-    color: peru;
+    color: #a05d37;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -236,22 +236,25 @@ body .container {
 .about-content {
     display: flex;
     flex-direction: column;
-    margin: 50px;
+    justify-content: center;
+    margin: 30px;
+    width: 50%;
 }
 .about-content h2 {
     color: peru;
     text-transform: uppercase;
     padding-bottom: 20px;
+    font-size: 24px;
 }
 .about-content h1 {
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
     padding-bottom: 20px;
 }
 .about-content p {
     text-align: justify;
-    padding-bottom: 20px;
-    color: burlywood
+    padding-bottom: 25px;
+    color: burlywood;
 }
 .about-content a {
     width: 100px;  
@@ -261,7 +264,8 @@ body .container {
     justify-content: end;
 }
 .about-img {
-    border: 1px solid red;
+    width: 50%;
+    /* border: 1px solid red; */
 }
 /* product page */
 .cart {
@@ -325,6 +329,10 @@ body .container {
     background-color: transparent;
 }
 /* contact page */
+.container {
+    display: flex;
+    flex-direction: column;
+}
 table {
     margin-top: 10px;
 }
