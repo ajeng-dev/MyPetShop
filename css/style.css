@@ -3,7 +3,7 @@ body {
 }
 .header {
     height: 100%;
-    background-image: url(/MyPetShop/assets/page-home.png);
+    background-image: url(/assets/page-home.png);
     background-size: cover;
 }
 .navbar {
@@ -66,7 +66,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
+    font-size: 55px;
     color: #a05d37;
     font-size: 50px;
     margin: 0 10px;
@@ -76,7 +76,7 @@ body {
     width: 100px;
 }
 .banner-content a:hover {
-    background-color: #a05d37;
+    background-color: #bf9a7a;
     color: white;
 } 
 .sign-in {
@@ -113,6 +113,11 @@ body .container {
     background-color: #bf9a7a;
     color: white;
 }
+.information-card .card-services .card-1 .card ol li {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
 /* sign in page */
 .sign-in-page {
     background-image: none;
@@ -129,7 +134,7 @@ body .container {
     color: #a05d37;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .form .title h1 {
@@ -155,22 +160,23 @@ body .container {
 .form-input {
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid peru;
+    border: 1px solid #a05d37;
 }
 .form-group .btn {
-    border: 1px solid peru;
-    background-color: peru;
+    border: 1px solid #a05d37;
+    background-color: #bf9a7a;
     color: white;
     font-size: 24px;
 }
 .form-group .btn:hover {
-    border: 1px solid peru;
+    border: 1px solid #bf9a7a;
     background-color: white;
     font-size: 24px;
+    color: #a05d37;
 }
 .form-group a {
     text-align: none;
-    color: peru;
+    color: #a05d37;
     font-weight: bold;
     margin-top: 10px;
     text-align: right;
@@ -178,15 +184,24 @@ body .container {
 }
 .sign-in-anchor a {
     text-decoration: none;
-    color: peru;
+    color: #a05d37;
     font-weight: bold;
 }
 .img-login {
     width: 500px;
 }
 .img-login img {
-    width: 150%;
+    width: 100%;
     object-fit: cover;
+}
+
+/* sign up page */
+.sign-up-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
 }
 /* animal page */
 .animal-page {
@@ -206,7 +221,7 @@ body .container {
     text-align: center; 
     padding-bottom: 20px;
     font-weight: bold;
-    color: peru;
+    color: #a05d37;
 }
 .animal-1 img {
     width: 450px;
@@ -223,7 +238,7 @@ body .container {
     text-align: center; 
     padding-bottom: 20px;
     font-weight: bold;
-    color: peru;
+    color: #a05d37;
 }
 .animal-2 img {
     width: 450px;
@@ -237,13 +252,14 @@ body .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 50px;
     margin: 30px;
     width: 50%;
 }
 .about-content h2 {
-    color: peru;
+    color: #a05d37;
     text-transform: uppercase;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     font-size: 24px;
 }
 .about-content h1 {
@@ -254,7 +270,7 @@ body .container {
 .about-content p {
     text-align: justify;
     padding-bottom: 25px;
-    color: burlywood;
+    color: #bf9a7a;
 }
 .about-content a {
     width: 100px;  
@@ -264,8 +280,8 @@ body .container {
     justify-content: end;
 }
 .about-img {
-    width: 50%;
-    /* border: 1px solid red; */
+    width: 450px;
+    height: 400px;
 }
 /* product page */
 .cart {
@@ -279,7 +295,7 @@ body .container {
     justify-content: center;
 }
 .product-item {
-    border: 2px solid peru;
+    border: 2px solid #a05d37;
     border-radius: 10px;
     width: 230px;
     height: 300px;
@@ -332,25 +348,59 @@ body .container {
 .container {
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+}
+.wrapper {
+    padding-left: 190px;
+}
+.wrapper h1 {
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.wrapper p {
+    font-size: 18px;
+    color: #bf9a7a;
 }
 table {
-    margin-top: 10px;
+    margin-top: 30px;
 }
 table thead th {
     padding: 5px;
-    border: 1px solid black;
+    border: 2px solid #c09a69;
+    background-color: #c09a69;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
 }
 table tbody tr td {
-    padding: 5px;
-    border: 1px solid black;
+    padding: 20px;
+    border: 2px solid #c09a69;
+    text-align: center;
 }
 /* services page */
+.services {
+    display: flex;
+    justify-content: space-between;
+}
+.services-img {
+    width: 100px;
+    height: 150px;
+}
+.card-services {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
 .card {
     width: 300px;
     height: 200px;
-    border: 1px solid #000;
-    border-radius: 5%;
+    border: 3px solid #c09a69;
+    border-radius: 8%;
     position: relative;
+    margin: 50px 30px;    
 }
 .card h1 {
     text-align: center;
@@ -364,7 +414,9 @@ table tbody tr td {
     position: relative;
     margin-top: 10%;
     padding: 10px;
-    text-align: center;
+    text-align: justify;
+    padding: 0 5px;
+    letter-spacing: 1px;
 }
 /* customers */
 .customer-section {
@@ -374,7 +426,10 @@ table tbody tr td {
     max-width: 500px;
   }
   .customer-section-img img {
-    width: 50%;
+    width: 350px;
+    height: 350px;
+    /* border: 1px solid red */
+
   }
   .customer-form {
     padding: 10px;
@@ -382,17 +437,18 @@ table tbody tr td {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 50px;
   }
   .customer-form button {
-    background-color: peru;
-    border: 1px solid peru;
+    background-color: #bf9a7a;
+    border: 1px solid #bf9a7a;
     color: #fff;
     width: 100px;
   }
   .customer-form h1 {
-    border-left: 1px solid peru;
+    /* border-left: 1px solid peru; */
     padding-left: 10px;
-    color: peru;
+    color: #a05d37;
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
@@ -410,6 +466,9 @@ table tbody tr td {
   .form-group-customer input, .form-group-customer select {
     width: 70%;
     padding: 5px;
+    background-color: #e8e3d9;
+    border: 1px solid #e8e3d9;
+    border-radius: 2px;
   }
   .form-group-customer .form-group-customer-radio {
     display: flex;
