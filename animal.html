@@ -4,6 +4,31 @@
         <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
+        <style>
+            .animal-content {
+                position: relative;
+            }
+            .animal-text {
+                top: 10;
+                right: 10;
+                position: absolute;
+                background-color: #ffffff;
+                color: #000;
+                border-radius: 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 95%;
+                height: 95%;
+                opacity: 0;
+                transition: 0.6s;
+                text-align: justify;
+                line-height: 2;
+            }           
+            .animal-text:hover {
+                opacity: 1;
+            }
+        </style>
     </head>
     <body>
         <div class="header sign-in-page">
@@ -40,23 +65,66 @@
         </div>
         <div class="animal-page">
             <div class="animal-1">
-                <div>
-                    <h1>Dog</h1>
-                    <img src="assets/animals-dog-new.png" alt="dog">    
+                <h1>Dog</h1> 
+                <div class="animal-content">
+                    <img src="assets/animals-dog-new.png" alt="dog">
+                        <div class="animal-text">
+                            <p>
+                            Dogs are loyal and loving pets, known as man's best friends.
+                            They need attention, care, and stimulation to stay healthy and happy.
+                            At the pet shop, you can find useful services for caring for your dog,
+                            such as grooming to keep the fur and skin clean, as well as routine health checks.
+                            Training services are also highly recommended to help your dog learn good behavior.
+                            By taking advantage of these services, you can provide the best care for 
+                            your furry friend.
+                            </p>
+                        </div>    
                 </div>
-                <div>
-                    <h1>Rabbit</h1>
-                    <img src="assets/animals-rabbit-new.png" alt="Rabbit">   
+                <h1>Rabbit</h1> 
+                <div class="animal-content">
+                    <img src="assets/animals-rabbit-new.png" alt="dog">
+                        <div class="animal-text">
+                            <p>
+                                Rabbits are cute and friendly pets, with special needs that
+                                must be met to keep them healthy and happy. For optimal care,
+                                many pet shops offer grooming services to keep the fur clean and
+                                prevent skin problems. Regular health check-ups are also important
+                                to detect problems early. You can also utilize behavioral
+                                consultation services to better understand your rabbit's needs.
+                            </p>
+                        </div>    
                 </div>
             </div>
             <div class="animal-2">
-                <div>
-                    <h1>Bird</h1>
-                    <img src="assets/animals-bird-new.png" alt="dog">    
+                <h1>Bird</h1> 
+                <div class="animal-content">
+                    <img src="assets/animals-bird-new.png" alt="dog">
+                        <div class="animal-text">
+                            <p>
+                                Birds are cheerful and active pets, known for their
+                                intelligence and interaction with humans. To care for your bird,
+                                the pet shop offers grooming services to keep its feathers and
+                                mid-life clean, as well as regular health checks. Additionally,
+                                bird behavior consultations are available to help you understand
+                                and your companions care for you better. With these services,
+                                you can ensure your birds stay healthy and happy. Health services
+                                at the pet shop, which offers special care for pet birds.
+                            </p>
+                        </div>    
                 </div>
-                <div>
-                    <h1>Cat</h1>
-                    <img src="assets/animals-cat-new.png" alt="Cat">   
+                <h1>Cat</h1> 
+                <div class="animal-content">
+                    <img src="assets/animals-cat-new.png" alt="dog">
+                        <div class="animal-text">
+                            <p>
+                                Cats are adorable and intelligent pets, with an independent nature
+                                that makes them suitable for a variety of groups. To ensure your
+                                cat stays healthy and happy, pet shops offer helpful services
+                                such as grooming to keep the coat clean, regular health checks,
+                                and behavioral training services can help cats adapt well at home,
+                                while cat boarding provides peace of mind when you have to be away.
+                            </p>
+                        </div>    
                 </div>
             </div>
         </div>   

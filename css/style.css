@@ -116,6 +116,7 @@ body .container {
     background-color: #bf9a7a;
     color: white;
 }
+/* learn more page */
 .information-card .card-services .card-1 .card ol li {
     padding-top: 20px;
     padding-left: 5px;
@@ -209,10 +210,6 @@ body .container {
     width: 100%;
     object-fit: cover;
 }
-
-/* sign up page */
-.sign-up-container .form-sign-up {
-}
 .sign-up-container {
     /* display: flex; */
     justify-content: center;
@@ -259,7 +256,7 @@ body .container {
     margin: 50px;
     display: flex;
     justify-content: space-evenly;
-    /* padding-right: 200px; */
+    position: relative;
 }
 .animal-1 {
     height: 400px;
@@ -277,6 +274,7 @@ body .container {
 .animal-1 img {
     width: 400px;
     height: 400px;
+    border: 1px solid #fff;
 }
 .animal-2 {
     height: 400px;
@@ -403,6 +401,12 @@ body .container {
 }
 .product .cart a {
     color: #000;
+    padding-right: 15px;
+    padding-top: 10px;
+    scale: 1.7;
+}
+.product .cart a:hover {
+    color: #a05d37;
 }
 /* contact page */
 .container {
@@ -481,7 +485,6 @@ table tbody tr td {
     line-height: 1.5;
 }
 .comment {
-    /* padding-left: 40%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -495,9 +498,6 @@ table tbody tr td {
 }
 .comment textarea {
     padding-bottom: 10px;
-}
-.comment button {
-
 }
 /* customers */
 .customer-section {
@@ -522,15 +522,21 @@ table tbody tr td {
     padding-left: 50px;
   }
   .customer-form button {
+    border: 1px solid #a05d37;
     background-color: #bf9a7a;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    }
+  .customer-form button:hover {
     border: 1px solid #bf9a7a;
-    color: #fff;
-    width: 100px;
-    margin-top: 20px;
-
+    background-color: white;
+    font-size: 15px;
+    color: #a05d37;
   }
   .customer-form h1 {
-    /* border-left: 1px solid peru; */
     padding-left: 10px;
     color: #a05d37;
     font-size: 24px;
