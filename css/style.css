@@ -339,10 +339,11 @@ body .container {
     transform: scale(0.4);
 }
 /* product page */
-.cart {
+.product-header {
     display: flex;
     justify-content: end;
     margin: 10px;
+    width: 95%;
 }
 .product-list {
     display: flex;
@@ -399,13 +400,13 @@ body .container {
     border: none;
     background-color: transparent;
 }
-.product .cart a {
+.product .product-header a {
     color: #000;
     padding-right: 15px;
     padding-top: 10px;
     scale: 1.7;
 }
-.product .cart a:hover {
+.product .product-header a:hover {
     color: #a05d37;
 }
 /* contact page */
@@ -583,14 +584,14 @@ table tbody tr td {
     display: flex;
     justify-content: space-between;
     width: 94%;
+    margin-top: 10px;
 }
 .cart .cart-header h1 {
     font-size: 42px;
 }
 .cart-body table tbody tr td {
     border: 1px solid red;
-    margin: 0 100px;
-
+    vertical-align: middle;
 }
 .cart-body table tbody tr td img {
     width: 150px;
