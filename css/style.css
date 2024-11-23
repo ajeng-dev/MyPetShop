@@ -573,3 +573,26 @@ table tbody tr td {
   .form-group-customer .form-group-customer-radio .form-group-customer-radio-item label {
     padding-left: 5px;
   }
+/* cart page */
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cart .cart-header {
+    display: flex;
+    justify-content: space-between;
+    width: 94%;
+}
+.cart .cart-header h1 {
+    font-size: 42px;
+}
+.cart-body table tbody tr td {
+    border: 1px solid red;
+    margin: 0 100px;
+
+}
+.cart-body table tbody tr td img {
+    width: 150px;
+}
+
