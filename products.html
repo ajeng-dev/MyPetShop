@@ -66,31 +66,95 @@
          <script>
             $(document).ready(function() {
                 const apiUrl = '/data/products.json';
+                let carts = [];
+                let products = []
 
                 $.get(apiUrl, function(data) {
                     $('#product-list').empty();
+                    products = data; 
 
                     // console.log(data);
                     data.forEach(item => {
+                        // add components
                         const itemHTML = `
-                            <div class="product-item">
+                            <div class="product-item" data-id="${item.id}">
                                 <img src="assets/${item.thumbnail}" alt="">
                                 <div class="product-item-description">
                                     <h1>${item.name}</h1>
                                     <p>${item.displayPrice}</p>
                                     <div class="product-item-btn">
-                                        <button>-</button>
-                                        <input disabled type="text" name="" id="" value="1">
-                                        <button>+</button>
+                                        <button class="decrease-btn" data-id="${item.id}">-</button>
+                                        <input class="qty" disabled type="text" value="0">
+                                        <button class="increase-btn" data-id="${item.id}">+</button>
                                     </div>
                                 </div>
                             </div>
                         `;
 
-                        $(`#product-list`).append(itemHTML)
-                    })
-                }) 
-            })
+                        // append component
+                        $(`#product-list`).append(itemHTML);
+
+                        // increase
+                        $(document).on('click', `.increase-btn[data-id="${item.id}"]`, function(){
+                            updateQty(item.id, 1)
+                        })
+
+                        // decrease
+                        $(document).on('click', `.decrease-btn[data-id="${item.id}"]`, function(){
+                            updateQty(item.id, -1)
+                        })
+                    });
+                });
+
+                // function increase and decrease
+                function updateQty(productId, value) {
+                    // find product
+                    let getProductById = carts.find(item => item.id === productId);
+
+                    // if product exist
+                    if (getProductById) {
+                        getProductById.qty += value;
+                        // console.log('getProductById =>', getProductById);
+
+                        if (getProductById.qty <= 0) {
+                            // set qty to 0
+                            $(`.product-item[data-id="${productId}"] .qty`).val(0)
+                            
+                            if (carts.length === 2) {
+                                const newCarts = carts.find(item => item.id !== productId)
+                                carts = [{...newCarts}]
+                            } else if (carts.length === 1) {
+                                carts = []
+                            } else {
+                                const newCarts = carts.find(item => item.id !== 0)
+                            }
+                        } else {
+                            // set qty  by value
+                            $(`.product-item[data-id="${productId}"] .qty`).val(getProductById.qty)
+                            
+                        }
+                    } else if (!getProductById && value === 1) {
+                        const  getNewProduct = products.find(item => item.id === productId);
+
+                        carts.push({
+                            id : getNewProduct.id,
+                            name : getNewProduct.name,
+                            price : getNewProduct.price,
+                            displayPrice : getNewProduct.displayPrice,
+                            thumbnail : getNewProduct.thumbnail,
+                            qty : 1
+                        })
+
+                        $(`.product-item[data-id="${productId}"] .qty`).val(1)
+                    }
+                     
+                    console.log(carts.length)
+                        
+
+                    
+                    // if product is not exist
+                }
+            });
          </script>
 
     </body>
