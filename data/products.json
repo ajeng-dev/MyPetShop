@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "name": "2x Royal Canin Hair & Skin Care Adult Dry Cat Food 400gr",
+    "displayPrice": "Rp 168.000",
+    "price": 168000,
+    "thumbnail": "product-1.png"
+  },
+  {
+    "id": 2,
+    "name": "2X Royal Canin Kitten Makanan Anak Kucing Dry 400g",
+    "displayPrice": "Rp 143.530",
+    "price": 143530,
+    "thumbnail": "product-2.png"
+  },
+  {
+    "id": 3,
+    "name": "Knitted Cat Ball Toy",
+    "displayPrice": "Rp 9.599",
+    "price": 9599,
+    "thumbnail": "product-3.png"
+  },
+  {
+    "id": 4,
+    "name": "Feather duster stick cat toy",
+    "displayPrice": "Rp 11.900",
+    "price": 11900,
+    "thumbnail": "product-4.png"
+  },
+  {
+    "id": 5,
+    "name": "3X Royal Canin Mini Aging 85g Wet Adult Dog Food",
+    "displayPrice": "Rp 33.910",
+    "price": 33910,
+    "thumbnail": "product-5.png"
+  },
+  {
+    "id": 6,
+    "name": "2X Royal Canin Xsmall Adult Dry Adult Dog Food 500gr",
+    "displayPrice": "Rp 160.000",
+    "price": 160000,
+    "thumbnail": "product-6.png"
+  },
+  {
+    "id": 7,
+    "name": "Dog Bite Toy Sound",
+    "displayPrice": "Rp 17.500",
+    "price": 17500,
+    "thumbnail": "product-7.png"
+  },
+  {
+    "id": 8,
+    "name": "Dog toy chicken duck",
+    "displayPrice": "Rp 9.844",
+    "price": 9844,
+    "thumbnail": "product-8.png"
+  },
+  {
+    "id": 9,
+    "name": "2Briter Bunny 1kg",
+    "displayPrice": "Rp 39.500",
+    "price": 39500,
+    "thumbnail": "product-9.png"
+  },
+  {
+    "id": 10,
+    "name": "NOVA MIXED BERRIES Rabbit Food 1 kg",
+    "displayPrice": "Rp 34.950",
+    "price": 34950,
+    "thumbnail": "product-10.png"
+  },
+  {
+    "id": 11,
+    "name": "Rabbit Grass Ball",
+    "displayPrice": "Rp 30.000",
+    "price": 30000,
+    "thumbnail": "product-11.png"
+  },
+  {
+    "id": 12,
+    "name": "Simple stacked fence cage for rabbits",
+    "displayPrice": "Rp 30.000",
+    "price": 30000,
+    "thumbnail": "product-12.png"
+  },
+  {
+    "id": 13,
+    "name": "Vitakraft Premium Menu Cockatiel 1 kg – Parakeet & Falks Food",
+    "displayPrice": "Rp 94.000",
+    "price": 94000,
+    "thumbnail": "product-13.png"
+  },
+  {
+    "id": 14,
+    "name": "Versele Laga Exotic Nut Burung Kakatua Parrot 1kg",
+    "displayPrice": "Rp 137.500",
+    "price": 137500,
+    "thumbnail": "product-14.png"
+  },
+  {
+    "id": 15,
+    "name": "Magpie Bird Food TWISTER GOLD Bird Food 400 gr",
+    "displayPrice": "Rp 13.500",
+    "price": 13500,
+    "thumbnail": "product-15.png"
+  },
+  {
+    "id": 16,
+    "name": "Bird Basketball Toy",
+    "displayPrice": "Rp 9.000",
+    "price": 9000,
+    "thumbnail": "product-16.png"
+  },
+  {
+    "id": 17,
+    "name": "Cat Choize Kitten Salmon Milk 1kg",
+    "displayPrice": "Rp 20.000",
+    "price": 20000,
+    "thumbnail": "product-17.png"
+  },
+  {
+    "id": 18,
+    "name": "Wet Dog Food Chicken and Grilled Liver Loaf with Vegetables 80 g",
+    "displayPrice": "Rp 9.000",
+    "price": 9000,
+    "thumbnail": "product-18.png"
+  },
+  {
+    "id": 19,
+    "name": "Nutri Booster Daily Feed for Voer Pleci Birds",
+    "displayPrice": "Rp 14.900",
+    "price": 14900,
+    "thumbnail": "product-19.png"
+  },
+  {
+    "id": 20,
+    "name": "Smart Heart Rabbit Food Rabbit Food 1kg Adult Rabbit Smartheart Rabbit Child",
+    "displayPrice": "Rp 35.999",
+    "price": 35999,
+    "thumbnail": "product-20.png"
+  },
+  {
+    "id": 21,
+    "name": "Cat Climbing Toy",
+    "displayPrice": "Rp 18.9849",
+    "price": 18984.9,
+    "thumbnail": "product-21.png"
+  },
+  {
+    "id": 22,
+    "name": "Dog sleeping mat",
+    "displayPrice": "Rp 50.000",
+    "price": 50000,
+    "thumbnail": "product-22.png"
+  },
+  {
+    "id": 23,
+    "name": "PRORABBIT - Rabbit Vitamins",
+    "displayPrice": "Rp 5.500",
+    "price": 5500,
+    "thumbnail": "product-23.png"
+  },
+  {
+    "id": 24,
+    "name": "Bird Swing Toy",
+    "displayPrice": "Rp 20.000",
+    "price": 20000,
+    "thumbnail": "product-24.png"
+  }
+]
