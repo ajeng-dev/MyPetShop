@@ -383,6 +383,12 @@ body .container {
     color: #00c4cc;
     margin-bottom: 10px;
 }
+.product-item-description .btn-AddtoCart {
+    border: 1px solid #a05d37;
+    background-color: #bf9a7a;
+    color: white;
+    font-size: 24px;
+}
 .product-item-btn {
     display: flex;
     border: 1px solid black;
@@ -590,7 +596,7 @@ table tbody tr td {
     font-size: 42px;
 }
 .cart-body table tbody tr td {
-    border: 1px solid red;
+    border: 1px solid #bf9a7a;
     vertical-align: middle;
 }
 .cart-body table tbody tr td img {
@@ -625,9 +631,10 @@ table tbody tr td {
 }
 .btn-checkout {
     color: white;
-    background-color:#a05d37;
+    background-color:#bf9a7a;
     width: 100%;
     padding: 10px;
     font-size: 18px;
     border-radius: 10px;
+    /* border: #bf9a7a; */
 }
