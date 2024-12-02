@@ -1,0 +1,19 @@
+1. click event
+2. change event
+3. mouse event => tooltip
+4. keypress (??)
+5. focus event => error/validation form
+
+jQuery => 
+1. fetch products
+2. ??
+
+
+pages:
+## products page
+1. fetch (with jQuery) data products from data json
+2. counting qty to variable cart (button plus and minus)
+
+## cart page
+1. fetch (with jQuery) data cart
+
