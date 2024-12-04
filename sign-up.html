@@ -49,35 +49,95 @@
                 </div>
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="name" class="form-input">
+                    <input type="text" id="name" class="form-input">
+                    <div class="error-message" id="name-error"></div>
                 </div>
                 <div class="form-group">
-                    <label for="address">Email Address</label>
-                    <input type="address" class="form-input">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-input">
+                    <div class="error-message" id="email-error"></div>
                 </div>
                 <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="username" class="form-input">
+                    <label for="text">Username</label>
+                    <input type="username" id="username" class="form-input">
+                    <div class="error-message" id="username-error"></div>
                 </div>
                 <div class="form-group">
                     <label for="Password">Password</label>
-                    <input type="password" class="form-input">
+                    <input type="password" id="password" class="form-input">
+                    <div class="error-message" id="password-error"></div>
                 </div>
-                <div class="social-media">
+                <!-- <div class="social-media">
                     <p>or <span style="font-weight: bold;">sign in</span> with your social media account</p>
                 </div>
                 <div class="social-media-menu" style="letter-spacing: 10px;">
                     <i data-feather="facebook"></i>
                     <i data-feather="twitter"></i>
                     <i data-feather="instagram"></i>
-                </div>
+                </div> -->
                 <div class="form-group">
                     <button class="btn" type="submit">Sign Up</button>
                 </div>
             </div>
         </div>
+
+        <script src="script/middleware.js"></script>
         <script>
-            feather.replace();
+            // feather.replace();
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+
+            $('.form-group button').click(function(e) {
+                e.preventDefault();
+
+                let name = $('#name').val().trim();
+                let email = $('#email').val().trim();
+                let username = $('#username').val().trim();
+                let password = $('#password').val().trim();
+                let isError = false;
+
+                // reset error
+                $('.form-input').removeClass('error');
+                $('.error-messege').text('')
+
+                // validate fields
+                if (name === '') {
+                    errorMessage('name', 'Name is required')
+                    isError = true;
+                }
+                if (email === '') {
+                    errorMessage('email', 'Email is required')
+                    isError = true;
+                }
+                if (username === '') {
+                    errorMessage('username', 'Username is required')
+                    isError = true;
+                }
+                if (password === '') {
+                    errorMessage('password', 'Password is required')
+                    isError = true;
+                }
+                
+                if (!isError) {
+                    let payload = {
+                        name,
+                        email,
+                        username,
+                        password
+                    }
+                    users.push(payload);
+                    localStorage.setItem('users', JSON.stringify(users))
+                    alert('Sign up has been successfully')
+                    // redirect
+                    window.location.href = 'sign-in.html'
+                }
+
+
+            })
+            
+            function errorMessage(id, message) {
+                $(`#${id}`).addClass('error')
+                $(`#${id}-error`).text(message)
+            }
         </script>
     </body>
 </html>

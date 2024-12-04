@@ -47,17 +47,19 @@
                 </div>
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="username" class="form-input">
+                    <input type="text" id="username" class="form-input">
+                    <div class="error-message" id="username-error"></div>
                 </div>
                 <div class="form-group">
-                    <label for="Password">Password</label>
-                    <input type="password" class="form-input">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-input">
+                    <div class="error-message" id="password-error"></div>
                     <a href="/forgot-password.html">forgot password?</a>
                 </div>
-                <div>
+                <!-- <div>
                     <input type="checkbox" name="checkbox" id="checkbox">
                     <label for="checkbox">Remember me</label>
-                </div>
+                </div> -->
                 <div class="form-group">
                     <button class="btn" type="submit">Login</button>
                 </div>
@@ -69,5 +71,53 @@
                 <img src="assets/MyPetShop-dog-login (1366 x 1366 px).png" alt="dog login">
             </div>
         </div>
+
+        <script src="script/middleware.js"></script>
+        <script>
+            let users = JSON.parse(localStorage.getItem('users')) || []
+
+            $('.form-group button').click(function(e) {
+                e.preventDefault();
+
+                let username = $('#username').val().trim();
+                let password = $('#password').val().trim();
+                let isError = false;
+
+                // reset error
+                $('.form-input').removeClass('error');
+                $('.error-messege').text('')
+
+                if (username === '') {
+                    errorMessage('username', 'Username is required')
+                    isError = true;
+                }
+                if (password === '') {
+                    errorMessage('password', 'Password is required')
+                    isError = true;
+                }
+
+                if (!isError) {
+                    let user = users.find(item => item.username === username)
+                    if (user && user.password === password) {
+                        // save to localStorage as a loginSession
+                        localStorage.setItem('auth', JSON.stringify({
+                            name: user.name,
+                            email: user.email,
+                            username: user.username
+                        }))
+
+                        alert('login successfully')
+                        location.reload()
+                    } else {
+                        errorMessage('username', 'Invalid username or password')
+                    }
+                }
+            })
+                
+            function errorMessage(id, message) {
+                $(`#${id}`).addClass('error')
+                $(`#${id}-error`).text(message)
+            }
+        </script>
     </body>
 </html>

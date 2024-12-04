@@ -62,11 +62,11 @@
 
         <!-- script js -->
          <!-- <script src="script.js"></script> -->
-
+         <script src="script/middleware.js"></script>
          <script>
             $(document).ready(function() {
                 const apiUrl = '/data/products.json';
-                let carts = [];
+                let carts = JSON.parse(localStorage.getItem('cart')) || [];
                 let products = []
 
                 $.get(apiUrl, function(data) {
@@ -94,6 +94,12 @@
                         // append component
                         $(`#product-list`).append(itemHTML);
 
+                        // set qty from cart
+                        const getQtyItem = carts.find(el => el.id === item.id)
+                        if (getQtyItem) {
+                            $(`.product-item[data-id="${item.id}"] .qty`).val(getQtyItem.qty)
+                        }
+
                         // increase
                         $(document).on('click', `.increase-btn[data-id="${item.id}"]`, function(){
                             updateQty(item.id, 1)
@@ -114,10 +120,9 @@
                     // if product exist
                     if (getProductById) {
                         getProductById.qty += value;
-                        // console.log('getProductById =>', getProductById);
-
                         if (getProductById.qty <= 0) {
                             // set qty to 0
+                            carts = carts.filter(item => item.id !== productId)
                             $(`.product-item[data-id="${productId}"] .qty`).val(0)
                             
                             if (carts.length === 2) {
@@ -144,15 +149,11 @@
                             thumbnail : getNewProduct.thumbnail,
                             qty : 1
                         })
-
                         $(`.product-item[data-id="${productId}"] .qty`).val(1)
                     }
-                     
-                    console.log(carts.length)
-                        
-
                     
-                    // if product is not exist
+                    // save to localStorage
+                    localStorage.setItem('cart', JSON.stringify(carts))
                 }
             });
          </script>
