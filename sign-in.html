@@ -48,6 +48,7 @@
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" id="username" class="form-input">
+                    <span class="input-count" style="text-align: right; margin-top: 5px">50/0</span>
                     <div class="error-message" id="username-error"></div>
                 </div>
                 <div class="form-group">
@@ -75,12 +76,43 @@
         <script src="script/middleware.js"></script>
         <script>
             let users = JSON.parse(localStorage.getItem('users')) || []
+            let username = '';
+            let password = '';
 
+            // on change
+            $('#username').on('change', function() {
+                username = e.target.value;
+            });
+
+            $('#password').on('change', function() {
+                password = e.target.value;
+            });
+
+            // on focus
+            $('#username').on('focus', function() {
+                $('#username').css('border', '1px solid blue');
+            });
+
+            $('#password').on('focus', function() {
+                $('#password').css('border', '1px solid blue');
+            });
+
+            // keypress
+            $(document).ready(function() {
+                $('#username').keypress(function(e) {
+                    const maxLength = 50;
+                    const currentLength = e.target.value.length+1
+                    if (currentLength > maxLength) {
+                        errorMessage('username', 'Username max length is' + maxLength )
+                    } else {
+                        $('.form-group .input-count').text(`${maxLength}/${currentLength}`);
+                    }
+                })
+            })
+
+            // on click
             $('.form-group button').click(function(e) {
                 e.preventDefault();
-
-                let username = $('#username').val().trim();
-                let password = $('#password').val().trim();
                 let isError = false;
 
                 // reset error
@@ -91,6 +123,7 @@
                     errorMessage('username', 'Username is required')
                     isError = true;
                 }
+
                 if (password === '') {
                     errorMessage('password', 'Password is required')
                     isError = true;

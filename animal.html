@@ -5,31 +5,6 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <style>
-            .animal-content {
-                position: relative;
-            }
-            .animal-text {
-                top: 10;
-                right: 10;
-                position: absolute;
-                background-color: #ffffff;
-                color: #000;
-                border-radius: 2px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 95%;
-                height: 95%;
-                opacity: 0;
-                transition: 0.6s;
-                text-align: justify;
-                line-height: 2;
-            }           
-            .animal-text:hover {
-                opacity: 1;
-            }
-        </style>
     </head>
     <body>
         <div class="header sign-in-page">
@@ -130,5 +105,17 @@
             </div>
         </div>
         <script src="script/middleware.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.animal-content').mousemove(function(a) {
+                    $(this).find('.animal-text').css('opacity', 1)
+                });
+
+                $('.animal-content').mouseleave(function(a) {
+                    $(this).find('.animal-text').css('opacity', 0)
+                });
+            })
+
+        </script>
     </body>
 </html>

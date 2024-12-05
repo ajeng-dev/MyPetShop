@@ -168,6 +168,10 @@ body .container {
     display: flex;
     flex-direction: column;
 }
+.input-count {
+    text-align: right;
+    margin-top: 5px
+}
 .form-group label {
     font-weight: border;
     margin-bottom: 10px;
@@ -293,6 +297,26 @@ body .container {
     width: 400px;
     height: 400px;
 }
+.animal-content {
+    position: relative;
+}
+.animal-text {
+    top: 10;
+    right: 10;
+    position: absolute;
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 95%;
+    opacity: 0;
+    transition: 0.6s;
+    text-align: justify;
+    line-height: 2;
+} 
 /* about page */
 .about {
     display: flex;
@@ -383,12 +407,7 @@ body .container {
     color: #00c4cc;
     margin-bottom: 10px;
 }
-.product-item-description .btn-AddtoCart {
-    border: 1px solid #a05d37;
-    background-color: #bf9a7a;
-    color: white;
-    font-size: 24px;
-}
+
 .product-item-btn {
     display: flex;
     border: 1px solid black;
@@ -580,6 +599,7 @@ table tbody tr td {
   .form-group-customer .form-group-customer-radio .form-group-customer-radio-item label {
     padding-left: 5px;
   }
+
 /* cart page */
 .cart {
     display: flex;
@@ -638,3 +658,18 @@ table tbody tr td {
     border-radius: 10px;
     /* border: #bf9a7a; */
 }
+
+/* globab css */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px
+}
+.form-input.error {
+    border: 1px solid red;
+}
+.logout-btn {
+    border: 1px solid #bf9a7a;
+    cursor: pointer;
+}
+
