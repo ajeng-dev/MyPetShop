@@ -81,11 +81,11 @@
 
             // on change
             $('#username').on('change', function() {
-                username = e.target.value;
+                username = $(this).val();
             });
 
             $('#password').on('change', function() {
-                password = e.target.value;
+                password = $(this).val();
             });
 
             // on focus
